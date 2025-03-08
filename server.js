@@ -13,7 +13,7 @@
 const HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const path = require("path");
-const collegeData = require("./collegeData.js");
+const collegeData = require("./modules/collegeData.js");
 
 const app = express();
 
