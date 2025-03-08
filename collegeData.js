@@ -16,7 +16,7 @@ module.exports.initialize = function () {
                 return
             }
 
-            fs.readFile("./data/students.json", "utf8", (err, studentData) => {
+            fs.readFile("./public/data/courses.json", "utf8", (err, courseData) => {
                 if (err) {
                     reject("unable to load students")
                     return
