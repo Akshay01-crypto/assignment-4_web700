@@ -76,10 +76,8 @@ app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, "views/404.html"));
 });
 
-collegeData.initialize()
-    .then(() => {
-        app.listen(HTTP_PORT, () => console.log(`Server running on port ${HTTP_PORT}`));
-    })
-    .catch((err) => {
-        console.error(err);
-    });
+module.exports = app;
+
+collegeData.initialize().catch((err) => {
+    console.error(err);
+});
